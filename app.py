@@ -6,14 +6,14 @@ import numpy as np
 def load_model_and_vectorizer(model_choice):
     try:
         if model_choice == "KNN":
-            model = pickle.load(open('C:/Kuliah/APLAI/Code/model/knn_model.sav', 'rb'))
-            vectorizer = pickle.load(open('C:/Kuliah/APLAI/Code/model/vectorizer_knn.sav', 'rb'))
+            model = pickle.load(open('knn_model.sav', 'rb'))
+            vectorizer = pickle.load(open('vectorizer_knn.sav', 'rb'))
         elif model_choice == "Logistic Regression":
-            model = pickle.load(open('C:/Kuliah/APLAI/Code/model/logistic_model.sav', 'rb'))
-            vectorizer = pickle.load(open('C:/Kuliah/APLAI/Code/model/vectorizer_logistic.sav', 'rb'))
+            model = pickle.load(open('logistic_model.sav', 'rb'))
+            vectorizer = pickle.load(open('vectorizer_logistic.sav', 'rb'))
         elif model_choice == "Support Vector Machine ***(SVM)***":
-            model = pickle.load(open('C:/Kuliah/APLAI/Code/model/svm_model.sav', 'rb'))
-            vectorizer = pickle.load(open('C:/Kuliah/APLAI/Code/model/vectorizer_svm.sav', 'rb'))
+            model = pickle.load(open('svm_model.sav', 'rb'))
+            vectorizer = pickle.load(open('vectorizer_svm.sav', 'rb'))
         else:
             st.error("Model choice is invalid.")
             return None, None
