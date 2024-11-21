@@ -1,5 +1,4 @@
-# un_or_supervised
-
+# Machine Learning Supervised dan Unsupervised
 Aplikasi ini menyediakan dua opsi untuk eksplorasi model pembelajaran mesin:
 
 - **Supervised Learning**: [Link ke Supervised App](https://supervised-err7bpaqtz3xgjhy78g5jg.streamlit.app/)
