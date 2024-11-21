@@ -5,24 +5,8 @@ import seaborn as sns
 import streamlit as st
 import plotly.graph_objects as go
 from sklearn.preprocessing import StandardScaler
-from sklearn.cluster import KMeans
-from sklearn.cluster import DBSCAN
 
 def load_model_and_cluster(model_path, data_path, new_data, algorithm):
-    """
-    Load a saved clustering model, add new data to the dataset, 
-    re-cluster, and visualize the updated clusters.
-
-    Parameters:
-        model_path (str): Path to the saved model file (.sav).
-        data_path (str): Path to the original dataset CSV file.
-        new_data (dict): A dictionary with keys 'Age', 'Annual Income (k$)', 
-                         and 'Spending Score (1-100)' containing new data.
-        algorithm (str): Selected clustering algorithm ("KNN (K-Means)" or "DBSCAN").
-
-    Returns:
-        pd.DataFrame: Updated data with cluster labels.
-    """
     try:
         # Load the original dataset
         original_data = pd.read_csv(data_path)
@@ -149,11 +133,11 @@ def main():
 
         # Path to the saved models and dataset
         if algo == "KNN (K-Means)":
-            model_file = r'C:\Kuliah\APLAI\Code\unsupervised\knn_model.sav'
+            model_file = '..//unsupervised//knn_model.sav'
         elif algo == "DBSCAN":
-            model_file = r'C:\Kuliah\APLAI\Code\unsupervised\dbscan_model.sav'
+            model_file =  '..//unsupervised//dbscan_model.sav'
         
-        data_file = r'C:\Kuliah\APLAI\Code\unsupervised\Mall_Customers.csv'
+        data_file =  '..//unsupervised//Mall_Customers.csv'
 
         # Perform clustering and show results
         clustered_data = load_model_and_cluster(model_file, data_file, new_data, algo)
