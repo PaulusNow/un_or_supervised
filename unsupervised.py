@@ -133,11 +133,11 @@ def main():
 
         # Path to the saved models and dataset
         if algo == "KNN (K-Means)":
-            model_file = '..//unsupervised//knn_model.sav'
+            model_file = 'knn_model.sav'
         elif algo == "DBSCAN":
-            model_file =  '..//unsupervised//dbscan_model.sav'
+            model_file =  'dbscan_model.sav'
         
-        data_file =  '..//unsupervised//Mall_Customers.csv'
+        data_file =  'Mall_Customers.csv'
 
         # Perform clustering and show results
         clustered_data = load_model_and_cluster(model_file, data_file, new_data, algo)
