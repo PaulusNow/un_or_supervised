@@ -123,7 +123,7 @@ def main():
     annual_income = st.number_input("Masukkan Annual Income (k$):", min_value=0, max_value=1000, value=60)
     spending_score = st.number_input("Masukkan Spending Score (1-100):", min_value=1, max_value=100, value=50)
 
-    if st.button("Clustering"):
+    if st.button("Prediksi"):
         # Create dictionary for new input
         new_data = {
             'Age': [age],
