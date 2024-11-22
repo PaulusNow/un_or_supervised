@@ -115,6 +115,12 @@ def main():
     st.title("Unsupervised Clustering")
     st.write("Masukkan data untuk clustering:")
 
+    st.write("[0] Klien dengan pendapatan tahunan rendah dan skor pengeluaran tinggi")
+    st.write("[1] Klien dengan pendapatan tahunan sedang dan skor pengeluaran sedang")
+    st.write("[2] Klien dengan pendapatan tahunan tinggi dan skor pengeluaran rendah")
+    st.write("[3] Klien dengan pendapatan tahunan tinggi dan skor pengeluaran tinggi")
+    st.write("[4] Klien dengan pendapatan tahunan rendah dan skor pengeluaran rendah")
+
     # Select algorithm (K-Means or DBSCAN)
     algo = st.radio("Pilih Algoritma:", ["KNN (K-Means)", "DBSCAN"])
 
